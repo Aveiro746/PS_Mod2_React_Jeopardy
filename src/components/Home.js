@@ -7,8 +7,7 @@ const Home = (props) => {
     return (
         <div>
             <h1>Welcome to Jeopardy! </h1>
-            <p>{props.jeopardy ? props.jeopardy.category.title: "loading"}</p>
-            <button id= "startBtn"> <Link to = "/question">Start!</Link></button> 
+            <button id= "Btn"> <Link to = "/question">Start!</Link></button> 
             
         </div>
     )

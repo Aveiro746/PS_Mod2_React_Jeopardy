@@ -12,7 +12,7 @@ const Score = (props) => {
 
             <h4>Value: {props.jeopardy ? props.jeopardy.value : "no value"}</h4>
            
-            <button ><Link to ="/question">Play again?</Link></button>
+            <button id = "Btn" ><Link to ="/question">Play again?</Link></button>
            
             
         </div>

@@ -7,12 +7,14 @@ const Question = (props) => {
     }
     return(
         <div>
-            <h1>Question:</h1>
+            <h1>Category:</h1>
+            <p>{props.jeopardy ? props.jeopardy.category.title: "loading"}</p>
+            <h2>Question:</h2>
             {props.jeopardy ? props.jeopardy.question: "Loading" }
             <div>
-                <button id= "nextBtn"> <Link to = "/score">Answer!</Link></button> 
+                <button id= "Btn"> <Link to = "/score">Answer!</Link></button> 
                     <div>
-                        <button onClick={refreshPage}> Click for new question!</button>
+                        <button id= "Btn"onClick={refreshPage}> Click for new question!</button>
                     </div>
             </div>
         </div>

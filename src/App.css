@@ -8,9 +8,13 @@
   
 }
 
-#startBtn {
+#Btn {
   font-size: larger;
-  
+
+}
+
+#Btn:hover{
+  background-color:maroon ;
 }
 .App-logo {
   height: 40vmin;
