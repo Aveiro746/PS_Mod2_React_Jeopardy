@@ -6,13 +6,13 @@ import Question from './components/Question';
 import Score from './components/Score';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
-
-
+import { useHistory } from 'react-router-dom/'
 
 function App() {
   const [jeopardy, setjeopardy] = useState (null)
 
   useEffect ( async () => {
+    
     const res = await axios.get('http://jservice.io/api/random')
     const jeopardyObject = await res
     setjeopardy(jeopardyObject.data[0])
@@ -20,6 +20,7 @@ function App() {
     
   }, [])
  
+
 
   return (
     <div className="App">
@@ -29,14 +30,16 @@ function App() {
 
       <Switch>
       <Route exact path="/">
-        <Home jeopardy={jeopardy}/>
+        <Home jeopardy={jeopardy} />
       </Route>
 
       <Route path="/question"> 
         <Question jeopardy = {jeopardy}/>
       </Route>
 
-      <Route path="/score" component={Score} />
+      <Route path="/score">
+        <Score jeopardy={jeopardy}/>
+      </Route>
       </Switch>
 
       

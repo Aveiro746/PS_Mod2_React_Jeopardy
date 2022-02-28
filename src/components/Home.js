@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 
+
 const Home = (props) => {
     console.log(props.jeopardy)
+
     return (
         <div>
             <h1>Welcome to Jeopardy! </h1>
