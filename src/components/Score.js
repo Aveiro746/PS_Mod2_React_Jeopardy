@@ -1,14 +1,16 @@
 import {useState} from 'react';
 
 const Score = (props) => {
-    const [score , setScore] = useState(0)
-    const currentValue = props.jeopardy.value
+    const [score , setScore] = useState()
+    
 
         return(
             <div>
+                
                 <h1>{score}</h1>
-                <button onClick={e => setScore(score + currentValue)}>Increase</button>
-                <button onClick={e => setScore(score - currentValue )}>Decrease</button>
+                <h4>{props.jeopardy ? props.jeopardy.value : "no value"}</h4>
+                <button onClick={e => setScore(score + props.jeopardy.value || 0)}>Increase</button>
+                <button onClick={e => setScore(score - props.jeopardy.value || 0 )}>Decrease</button>
                 
             </div>
         )

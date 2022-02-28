@@ -1,9 +1,9 @@
 const Question = (props) => {
-    console.log(props.jeopardy)
+    console.log(props)
     return(
         <div>
             <h1>Question:</h1>
-            {props.jeopardy.question}
+            {props.jeopardy ? props.jeopardy.question: "no question" }
         </div>
     )
 }
