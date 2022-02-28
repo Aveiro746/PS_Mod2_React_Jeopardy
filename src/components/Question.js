@@ -11,7 +11,9 @@ const Question = (props) => {
             {props.jeopardy ? props.jeopardy.question: "Loading" }
             <div>
                 <button id= "nextBtn"> <Link to = "/score">Answer!</Link></button> 
-                <button onClick={refreshPage}> Click for new question!</button>
+                    <div>
+                        <button onClick={refreshPage}> Click for new question!</button>
+                    </div>
             </div>
         </div>
     )
