@@ -1,7 +1,17 @@
-.App {
-  text-align: center;
+*{
+  background-color: midnightblue;
+  color: yellow;
 }
 
+.App {
+  text-align: center;
+  
+}
+
+#startBtn {
+  font-size: larger;
+  
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
