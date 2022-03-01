@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
+import axios, { Axios } from "axios";
 
 const Question = (props) => {
-    console.log(props)
-    function refreshPage() {
-        window.location.reload(false)
-    }
+    
+
     return(
         <div>
             <h1>Category:</h1>
@@ -14,7 +13,7 @@ const Question = (props) => {
             <div>
                 <button id= "Btn"> <Link to = "/score">Answer!</Link></button> 
                     <div>
-                        <button id= "Btn"onClick={refreshPage}> Click for new question!</button>
+                        <button id= "Btn"onClick={props.questioncall}> Click for new question!</button>
                     </div>
             </div>
         </div>
