@@ -16,7 +16,7 @@ function App() {
     const res = await axios.get('http://jservice.io/api/random')
     const jeopardyObject = await res
     setjeopardy(jeopardyObject.data[0])
-    console.log(jeopardy)
+  
 
       }
       fetchData()
