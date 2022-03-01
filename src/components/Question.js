@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import axios, { Axios } from "axios";
+
 
 const Question = (props) => {
     
