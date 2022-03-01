@@ -3,7 +3,7 @@ Enjoy a quick simple game of jeopardy! Click on the button and get a random jeop
 
 # About
 WireFrame: https://wireframe.cc/ihaaSz
-Link: 
+Link: https://competent-jennings-f35e95.netlify.app
 
 # Upcoming Features
 -Method to keep track of score in app!
