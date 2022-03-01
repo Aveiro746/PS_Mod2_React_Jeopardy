@@ -6,18 +6,20 @@ import Question from './components/Question';
 import Score from './components/Score';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
-import { useHistory } from 'react-router-dom/'
+
 
 function App() {
   const [jeopardy, setjeopardy] = useState (null)
 
-  useEffect ( async () => {
-    
+  useEffect ( () => {
+      async function fetchData(){
     const res = await axios.get('http://jservice.io/api/random')
     const jeopardyObject = await res
     setjeopardy(jeopardyObject.data[0])
     console.log(jeopardy)
-    
+
+      }
+      fetchData()
   }, [])
  
 
