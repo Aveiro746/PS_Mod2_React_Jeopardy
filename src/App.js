@@ -13,7 +13,7 @@ function App() {
 
   useEffect ( () => {
       async function fetchData(){
-    const res = await axios.get('http://jservice.io/api/random')
+    const res = await axios.get('https://jservice.io/api/random')
     const jeopardyObject = await res
     setjeopardy(jeopardyObject.data[0])
   
