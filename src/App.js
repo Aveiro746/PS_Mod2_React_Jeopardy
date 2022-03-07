@@ -7,9 +7,7 @@ import Score from './components/Score';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 
-// make a func thatll make an api call 
-//api will return a question from api
-//when you receive question set jeopardy to api response
+
 function App() {
   const [jeopardy, setjeopardy] = useState (null)
 
