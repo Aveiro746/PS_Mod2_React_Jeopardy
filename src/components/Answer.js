@@ -1,6 +1,6 @@
 const Answer =(props) =>{
     <div>
-        <p></p>
+      
     </div>
 }
 
