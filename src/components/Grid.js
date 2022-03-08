@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom"
+
+
 
 const Grid = (props) =>{
-  
 
+// TODO:Create useState to toggle between classnames to show different divs per tile
+      //
     return(
         
         <div>
@@ -11,12 +13,12 @@ const Grid = (props) =>{
             <div className="tile">Video Games</div>
             <div className="tile">American History</div>
             <div className="tile">Cartoons</div>
-            
+    
         </div>
         <div className="row clues">
             <div className="tile" >
                 <div className="question-value" >{props.videoGames ? props.videoGames.clues[0].value:"no value"}</div>
-                {/* <div className="question-answer">{props.videoGames ? props.videoGames.clues[0].answer:"no answer"}</div> */}
+                {/* <div className="question-answer">{props.videoGames ? props.videoGames.clues[0].question:"no question"}</div> */}
             </div>
             <div className="tile">
                 <div className="question-value">{props.history ? props.history.clues[0].value:"no value"}</div>

@@ -23,7 +23,7 @@ function App() {
     async function fetchhistory(){
       const res = await axios.get("https://jservice.io//api/category?id=780")
       sethistory(res.data)
-      console.log(history)
+      
     }
     fetchhistory()
   }, [])
@@ -58,11 +58,11 @@ function App() {
       <Switch>
 
       <Route exact path="/">
-        <Home  history = {history} cartoons = {cartoons} videoGames={videoGames} history = {history}/>
+        <Home  />
       </Route>
 
       <Route path = "/grid">
-        <Grid history = {history} cartoons = {cartoons} videoGames={videoGames} history = {history}/>
+        <Grid history = {history} cartoons = {cartoons} videoGames={videoGames} />
       </Route>
 
       <Route path="/question"> 
