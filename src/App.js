@@ -6,26 +6,48 @@ import Question from './components/Question';
 import Score from './components/Score';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
+import Grid from './components/Grid';
+import Footer from './components/Footer'
 
+// "https://jservice.io//api/category?id=<categoryID>"
+// fetch Video games  1892 
+//fetch Tv Cartoons 1348
+//fetch American History 780
 
 function App() {
-  const [jeopardy, setjeopardy] = useState (null)
+  const [videoGames, setvideoGames] = useState(null)
+  const [cartoons, setcartoons] = useState(null)
+  const [history, sethistory] =useState(null)
 
-  useEffect ( () => {
-      async function fetchData(){
-    const res = await axios.get('https://jservice.io/api/random')
-    const jeopardyObject = await res
-    setjeopardy(jeopardyObject.data[0])
-  
-
-      }
-      fetchData()
+  useEffect( () =>{
+    async function fetchhistory(){
+      const res = await axios.get("https://jservice.io//api/category?id=780")
+      sethistory(res.data)
+      console.log(history)
+    }
+    fetchhistory()
   }, [])
- 
-async function fetchApi(){
-  const res = await axios.get('https://jservice.io/api/random')
-  setjeopardy(res.data[0])
-}
+
+  useEffect( () =>{
+    async function fetchGames(){
+      const res =  await axios.get("https://jservice.io//api/category?id=1892")
+      setvideoGames(res.data)
+      
+    }
+    fetchGames()
+  }, [])
+  
+  useEffect( () =>{
+    async function fetchCartoons(){
+      const res = await axios.get("https://jservice.io//api/category?id=1348")
+      setcartoons(res.data)
+      
+    }
+    fetchCartoons()
+  }, [])
+
+
+
 
   return (
     <div className="App">
@@ -34,18 +56,25 @@ async function fetchApi(){
         <Navbar />
 
       <Switch>
+
       <Route exact path="/">
-        <Home jeopardy={jeopardy} />
+        <Home  history = {history} cartoons = {cartoons} videoGames={videoGames} history = {history}/>
+      </Route>
+
+      <Route path = "/grid">
+        <Grid history = {history} cartoons = {cartoons} videoGames={videoGames} history = {history}/>
       </Route>
 
       <Route path="/question"> 
-        <Question jeopardy = {jeopardy} questioncall = {fetchApi}/>
+        <Question  />
       </Route>
 
       <Route path="/score">
-        <Score jeopardy={jeopardy}/>
+        <Score />
       </Route>
+
       </Switch>
+      <Footer />
 
       
       
